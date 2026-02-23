@@ -6,43 +6,54 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
-  // functions
-  void greet() {
-    print("hellow ansh ");
-  }
+  const MyApp({super.key});
 
-  void greet_(String name) {
-    print("hello" + name);
-  }
-
-  void displayData(List a) {
-    int i = 0;
-    for (i = 0; i < a.length; i++) {
-      print(a[i]);
-    }
-  }
-
-  // data structure
-  // Lists -> ordred collection of elements
-  List<int> numbers = [1, 2, 3];
-  List<String> names = ["ansh", "yash", "saksham"];
-
-  // sets -> unordered collection of unique elements
-  Set<String> unique = {"ansh", "yash"};
-
-  // map -> stores the key value pair
-  Map user = {'name': 'ansh'};
-  Map<String, int> info = {'age': 5};
-
-  // this builds the widigets
   @override
   Widget build(BuildContext context) {
-    //function call
-    greet();
-    greet_(" yash");
-    displayData(numbers);
-    displayData(names);
-    return MaterialApp(debugShowCheckedModeBanner: false, home: FirstPage());
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 190, 87, 208),
+        body: Center(
+          child: Column(
+            children: [
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.amber,
+                padding: EdgeInsets.all(25),
+                child: Center(child: Text("this is the child widget")),
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                decoration: BoxDecoration(
+                  color: Colors.deepPurpleAccent,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                padding: EdgeInsets.all(25),
+                child: Center(
+                  child: Text(
+                    "this is the second container",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.amber,
+                padding: EdgeInsets.all(25),
+                child: Icon(Icons.favorite, size: 40, color: Colors.black),
+              ),
+            ],
+          ),
+        ),
+      ),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
