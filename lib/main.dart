@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:tutorial/pages/first_page.dart';
 
 void main() {
@@ -15,19 +16,20 @@ class MyApp extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 190, 87, 208),
         appBar: AppBar(backgroundColor: Colors.grey),
 
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        body: ListView(
+          // make the app scrollable
+          scrollDirection: Axis.horizontal,
           children: [
             Container(
-              height: 100,
-              width: 100,
+              height: 600,
+              width: 350,
               color: Colors.amber,
               padding: EdgeInsets.all(25),
               child: Center(child: Text("this is the child widget")),
             ),
             Container(
-              height: 100,
-              width: 100,
+              height: 600,
+              width: 350,
               decoration: BoxDecoration(
                 color: Colors.deepPurpleAccent,
                 borderRadius: BorderRadius.circular(20),
@@ -44,15 +46,13 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(
-              flex: 2, // maek this relativly expanded
-              // fills up the space
-              child: Container(
-                width: 100,
-                color: Colors.amber,
-                padding: EdgeInsets.all(25),
-                child: Icon(Icons.favorite, size: 40, color: Colors.black),
-              ),
+
+            Container(
+              height: 600,
+              width: 350,
+              color: Colors.amber,
+              padding: EdgeInsets.all(25),
+              child: Icon(Icons.favorite, size: 40, color: Colors.black),
             ),
           ],
         ),
