@@ -5,15 +5,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("this is the home page by drawer")),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
-          BottomNavigationBarItem(icon: Icon(Icons.upload), label: "upload"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "profile"),
-        ],
-      ),
-    );
+    return Scaffold(body: Center(child: Text("Home Page ")));
   }
 }
