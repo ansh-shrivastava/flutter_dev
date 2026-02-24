@@ -8,6 +8,37 @@ class FirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("this is the first page hellow ")),
+      drawer: Drawer(
+        backgroundColor: Colors.deepPurple[100],
+        child: Column(
+          children: [
+            DrawerHeader(child: Icon(Icons.person_2)),
+            //home page tiles
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("home"),
+              onTap: () {
+                Navigator.pop(
+                  context,
+                ); // this is to make the drawer close than switch the page
+                Navigator.pushNamed(context, "/home");
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text("settings"),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, "/settingspage");
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.contact_emergency),
+              title: Text("contact"),
+            ),
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
