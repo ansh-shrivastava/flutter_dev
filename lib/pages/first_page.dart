@@ -55,7 +55,7 @@ class _FirstPageState extends State<FirstPage> {
               title: Text("settings"),
               onTap: () {
                 Navigator.pop(context);
-                Navigator.pushNamed(context, "/settingspage");
+                Navigator.pushNamed(context, "/todo");
               },
             ),
             ListTile(

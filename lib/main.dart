@@ -4,6 +4,7 @@ import 'package:tutorial/pages/first_page.dart';
 import 'package:tutorial/pages/home_page.dart';
 import 'package:tutorial/pages/second_page.dart';
 import 'package:tutorial/pages/settings_page.dart';
+import 'package:tutorial/pages/to_do.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => HomePage(),
         '/secondpage': (context) => SecondPage(),
         '/settingspage': (context) => settings_page(),
+        '/todo': (context) => Todop(),
       },
     );
   }
